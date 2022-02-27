@@ -1,0 +1,15 @@
+import {IMAGES} from "../constants";
+const errorReducer = (state = false ,action) => {
+    switch (action.type) {
+        case IMAGES.LOAD:
+            return false;
+        case IMAGES.LOAD_SUCCESS:
+            return false;
+        case IMAGES.LOAD_FAIL:
+            return true;
+        default:
+            return state;
+    }
+}
+
+export default errorReducer;
